@@ -3,7 +3,7 @@ import { Flex, Box, VStack, Text, Heading } from '@chakra-ui/react';
 import ClickToCopy from '../../utils/clicktocopy';
 
 const PlayerGeneralData = ({ player }) => {
-    const steam = player.platforms.steam;
+    const steam = player.platforms ? player.platforms.steam : undefined;
     const membership = player.memberships[0];
     const steam_nickname = player.steam_nickname;
     const steam64 = player.steam_id_64;
