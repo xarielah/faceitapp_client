@@ -3,8 +3,6 @@ import { Flex, Box, VStack, Text, Heading } from '@chakra-ui/react';
 import ClickToCopy from '../../utils/clicktocopy';
 
 const PlayerGeneralData = ({ player }) => {
-    console.log(player);
-
     const steam = player.platforms.steam;
     const membership = player.memberships[0];
     const steam_nickname = player.steam_nickname;
@@ -22,13 +20,17 @@ const PlayerGeneralData = ({ player }) => {
         >
             <Heading size={'2xl'}>{player.nickname}'s information</Heading>
             <VStack spacing={'2em'} my={14} w={'100%'}>
-                {steam && <DataLine label={`SteamID`} data={steam} />}
-                {steam64 && <DataLine label={`STEAMID64`} data={steam64} />}
-                {steam_nickname && (
+                {steam ? <DataLine label={`SteamID`} data={steam} /> : ''}
+                {steam64 ? <DataLine label={`STEAMID64`} data={steam64} /> : ''}
+                {steam_nickname ? (
                     <DataLine label={`Steam Name`} data={steam_nickname} />
+                ) : (
+                    ''
                 )}
-                {membership && (
+                {membership ? (
                     <DataLine label={`Membership`} data={membership} />
+                ) : (
+                    ''
                 )}
             </VStack>
         </Flex>
