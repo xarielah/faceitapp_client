@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-    Flex,
-    Heading,
-    Box,
-    Text,
-    Image,
-    useToast,
-    SimpleGrid,
-    Tooltip,
-} from '@chakra-ui/react';
+import { Flex, Heading, Box, Text, Image, SimpleGrid } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import apiRequest from '../../../service/req';
 import OverlayLoading from '../../utils/overlayloading';
@@ -31,6 +22,7 @@ const PlayerProfile = () => {
             .then((res) => setPlayerData(res.data))
             .catch((e) => console.log(e))
             .finally(() => setLoading(false));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const parseGridValue = () => {

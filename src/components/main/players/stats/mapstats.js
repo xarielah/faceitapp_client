@@ -75,6 +75,7 @@ const MapStats = ({ data: { segments: data } }) => {
         } else {
             setCurrentBestMap('');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentKey]);
 
     return (

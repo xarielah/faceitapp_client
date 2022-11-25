@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import FavoritePlayerCard from './favoriteplayercard';
 import { SimpleGrid } from '@chakra-ui/react';
 import apiRequest from '../../service/req';
 import OverlayLoading from '../utils/overlayloading';
@@ -19,6 +18,7 @@ const PlayersContainer = ({ data }) => {
             })
             .catch((e) => console.log(e))
             .finally(() => setLoading(false));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     if (loading) return <OverlayLoading />;
@@ -27,7 +27,6 @@ const PlayersContainer = ({ data }) => {
             {fetchedData.length > 0 &&
                 fetchedData.map((player, index) => (
                     <PlayerCard data={player} key={index} />
-                    // <FavoritePlayerCard key={index} player={player} />
                 ))}
         </SimpleGrid>
     );

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Flex, Box, VStack, Text, Heading } from '@chakra-ui/react';
 import ClickToCopy from '../../utils/clicktocopy';
-import CustomTooltip from '../../utils/customtooltip';
 
 const PlayerGeneralData = ({ player }) => {
     console.log(player);

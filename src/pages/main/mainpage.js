@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { SearchBar, ResultsContainer } from '../../components/main';
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Flex, Heading, Text } from '@chakra-ui/react';
 import userDataContext from './content';
 import NoResults from '../../components/utils/noresults';

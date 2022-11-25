@@ -1,4 +1,4 @@
-import { Tooltip, Box, useToast } from '@chakra-ui/react';
+import { Box, useToast } from '@chakra-ui/react';
 import React from 'react';
 import CustomTooltip from './customtooltip';
 

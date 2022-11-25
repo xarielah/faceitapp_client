@@ -1,38 +1,19 @@
-import React, { useState } from 'react';
-import {
-    Box,
-    Flex,
-    Image,
-    Link,
-    Heading,
-    Text,
-    Button,
-    useToast,
-} from '@chakra-ui/react';
-import ClickToCopy from '../../utils/clicktocopy';
-import CustomTooltip from '../../utils/customtooltip';
-import CustomEloBadge from '../../utils/customelobadge';
-import favorites from '../../../service/favorites';
+import React from 'react';
+import { Box, Flex, Image, Link, Heading } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import PlayerLinks from '../players/playerlinks';
 
 const PlayerCard = ({ data }) => {
-    const [rerender, setRerender] = useState(false);
-    const renederFunc = () => setRerender(!rerender);
     const navigate = useNavigate();
 
     const {
         avatar,
-        country,
+
         cover_image,
         player_id,
-        games,
-        nickname,
-        memberships,
-    } = data;
 
-    const { isExisting, toggleAction } = favorites;
-    const toast = useToast();
+        nickname,
+    } = data;
 
     return (
         <Flex

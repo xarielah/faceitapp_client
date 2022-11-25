@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Spinner, Image, Text } from '@chakra-ui/react';
+import { Flex, Image, Text } from '@chakra-ui/react';
 import lazyDog from '../../assets/loading-dog.gif';
 
 const OverlayLoading = () => {
